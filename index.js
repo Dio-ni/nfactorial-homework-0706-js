@@ -124,13 +124,13 @@ async function checkAns(answer) {
       await searchByName(name.nameToSearch);
       await inputType();})();
 
-  }else if(answer>1){
+  }else if(answer==-1){
+    spinner.error({ text: `💀💀💀 End session` });
+  }else{
     spinner.error({ text: `Invalid number!!! Try again. Enter 0 or 1 only!!` });
     (async ()=>{
       await inputType();})();
 
-  }else if(answer==-1){
-    spinner.error({ text: `💀💀💀 End session` });
   }
 }
 
